@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "3398036b-3f8a-489a-a2b4-b03046158402",
+		"name": "Visitor-Management-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CheckIn",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|M3taQWUPyaOqyAgG0amVJOQmX66DrwDCZ72pBOqC",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitor_id\": \"2\",\r\n    \"check_in_time\": \"2023-08-20T14:30:00Z\",\r\n    \"check_out_time\": \"2023-08-20T18:30:00Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/check_ins",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"check_ins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create_Checkin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|M3taQWUPyaOqyAgG0amVJOQmX66DrwDCZ72pBOqC",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitor_id\": \"2\",\r\n    \"check_in_time\": \"2023-08-20T14:30:00Z\",\r\n    \"check_out_time\": \"2023-08-20T18:30:00Z\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/check_ins",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"check_ins"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Visitors",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aung Zin Latt\",\r\n    \"email\": \"aungzinlatt007@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aungzinlatt007@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_visitor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|gwFFclR60km6Zx6EiWQivFIuDeIKGfB9p7d0a2Bk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Aung Zin\",\r\n    \"last_name\": \"Latt\",\r\n    \"email\": \"aungzinlatt11@guest.com\",\r\n    \"phone\": \"09946693363\",\r\n    \"vehicle_type\": \"walk-in\",\r\n    \"purpose_of_visit\": \"To get knowledge\",\r\n    \"check_in_time\": \"2023-08-20T14:30:00Z\",\r\n    \"check_out_time\": \"2023-08-20T16:30:00Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/visitors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Here we can create CRUD for Visitors\nI created with Repository Design Pattern.\nAll the code are dynamic so that we can easy change the code  and no duplicated code as well."
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "checkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|gwFFclR60km6Zx6EiWQivFIuDeIKGfB9p7d0a2Bk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/visitors/2/checkout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"visitors",
+								"2",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCurrentVisitors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|gwFFclR60km6Zx6EiWQivFIuDeIKGfB9p7d0a2Bk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/dashboard/visitors",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"dashboard",
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
